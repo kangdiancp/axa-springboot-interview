@@ -24,6 +24,13 @@ public class User {
         this.password = password;
     }
 
+    public User(Long userId, String userName, String password, Set<Roles> roles) {
+        this.userId = userId;
+        this.userName = userName;
+        this.password = password;
+        this.roles = roles;
+    }
+
     @OneToMany(mappedBy = "user", fetch = FetchType.LAZY, cascade = CascadeType.REMOVE)
     private Set<Roles> roles;
 
