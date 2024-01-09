@@ -28,8 +28,7 @@ public class UserUnitTest {
     @Autowired
     private UserRepository repository;
 
-    @Autowired
-    private RolesRepository rolesRepository;
+
 
 
     //1. gunakan method test yg pertama
