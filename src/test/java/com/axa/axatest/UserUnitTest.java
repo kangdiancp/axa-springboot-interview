@@ -59,7 +59,7 @@ public class UserUnitTest {
     //3
     @Test
     public void should_store_user_and_role() {
-        // save data user with roles
+        // save data user with roles, kita kasih user rini dengan 2 roles
         User user1 = new User(null, "Rini", "rini",
             Set.of(new Roles(null,"ADMIN"),
                     new Roles(null,"GUEST"))
@@ -71,6 +71,7 @@ public class UserUnitTest {
         Optional<User> foundUser = repository.findById(user1.getUserId());
         //assertThat(foundUser.get()).isEqualTo(user1);
 
+        //expetasi, if user rini punya 2 roles akan passed
         assertThat(foundUser.get().getRoles()).hasSize(2);
     }
 
